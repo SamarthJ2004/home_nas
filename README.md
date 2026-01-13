@@ -2,6 +2,8 @@
 
 A no-nonsense Home NAS built using **plain Docker Compose**. Designed for predictability, recoverability, and simplicity.
 
+**[Read the full guide on Medium](https://medium.com/@samarth_04/article-1-a-minimal-home-nas-setup-that-just-works-a9e87d5fb745)**
+
 ---
 
 ### 🧠 Core Philosophy
@@ -49,7 +51,3 @@ docker compose up -d <service_name>
 * ✅ **Understandable & Repairable**
 * ✅ **Human-readable recovery paths**
 * ❌ **NOT** Enterprise HA or Multi-node.
-
----
-
-**[Read the full guide on Medium](https://medium.com/@samarth_04/article-1-a-minimal-home-nas-setup-that-just-works-a9e87d5fb745)**

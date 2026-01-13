@@ -1,0 +1,38 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  - job_name: 'immich_api'
+    static_configs:
+      - targets: ['immich-server:8081']
+
+  - job_name: 'immich_microservices'
+    static_configs:
+      - targets: ['immich-server:8082']
+
+  #- job_name: 'qbittorrent'
+  #  static_configs:
+  #    - targets: ['qbittorrent-exporter:9999']
+
+  #- job_name: 'jellyfin'
+  #   static_configs:
+  #     - targets: ['jellyfin-exporter:9989']
+
+  #- job_name: 'komga'
+  #  metrics_path: /actuator/prometheus
+  #  static_configs:
+  #    - targets: ['komga:25600']
+
+  #- job_name: 'radarr'
+  #  metrics_path: /metrics
+  #  static_configs:
+  #    - targets: ['radarr:7878']
+
+  #- job_name: 'sonarr'
+  #  metrics_path: /metrics
+  #  static_configs:
+  #    - targets: ['sonarr:8989']

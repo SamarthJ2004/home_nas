@@ -1,0 +1,12 @@
+services:
+  samba:
+    image: crazymax/samba:latest
+    container_name: samba
+    network_mode: host
+    volumes:
+      - "./samba/data:/data"
+      - "/mnt/hdd4tb:/samba/share"
+    environment:
+      - "TZ=Asia/Kolkata"
+      - "SAMBA_LOG_LEVEL=0"
+    restart: unless-stopped

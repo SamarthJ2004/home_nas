@@ -1,0 +1,28 @@
+include:
+  - path:
+      - ${INCLUDE_PATH}/media_server/qbittorrent.yml
+      - ${INCLUDE_PATH}/media_server/qui.yml
+      - ${INCLUDE_PATH}/media_server/sonarr.yml
+      - ${INCLUDE_PATH}/media_server/radarr.yml
+      - ${INCLUDE_PATH}/media_server/komga.yml
+      - ${INCLUDE_PATH}/media_server/jellyfin.yml
+      #- ${INCLUDE_PATH}/media_server/autobrr.yml
+      - ${INCLUDE_PATH}/media_server/jellyseerr.yml
+
+  - path:
+      - ${INCLUDE_PATH}/monitoring/nginx.yml
+      #- ${INCLUDE_PATH}/monitoring/pihole.yml
+      #- ${INCLUDE_PATH}/monitoring/monitoring.yml
+      
+  - path:
+      - ${INCLUDE_PATH}/immich_app/immich.yml
+    env_file: ${INCLUDE_PATH}/immich_app/.env
+
+  - path:
+      - ${INCLUDE_PATH}/file_server/nextcloud.yml
+      - ${INCLUDE_PATH}/file_server/bentopdf.yml
+    env_file: ${INCLUDE_PATH}/file_server/.env
+
+  - path:
+      - ${INCLUDE_PATH}/misc/samba.yml
+      - ${INCLUDE_PATH}/misc/yamtrack.yml

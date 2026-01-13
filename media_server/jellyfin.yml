@@ -1,0 +1,20 @@
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:10.11.5
+    container_name: jellyfin
+    # Optional - specify the uid and gid you would like Jellyfin to use instead of root
+    user: 1000:1000
+    ports:
+      - 8096:8096/tcp
+      - 7359:7359/udp
+    volumes:
+      - ./jellyfin/config:/config
+      - ./jellyfin/cache:/cache
+      - type: bind
+        source: /mnt/hdd4tb
+        target: /pool
+    restart: 'unless-stopped'
+    group_add:
+      - '992'
+    devices:
+      - /dev/dri/renderD128:/dev/dri/renderD128

@@ -1,0 +1,17 @@
+services:
+  komga:
+    image: gotson/komga
+    container_name: komga
+    volumes:
+      - type: bind
+        source: ./komga/config
+        target: /config
+      - type: bind
+        source: /mnt/hdd4tb
+        target: /pool
+    ports:
+      - 25600:25600
+    user: "1000:1000"
+    environment:
+      - TZ=Asia/Kolkata
+    restart: unless-stopped

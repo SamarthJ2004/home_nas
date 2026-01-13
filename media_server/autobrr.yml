@@ -1,0 +1,12 @@
+services:
+  autobrr:
+    container_name: autobrr
+    image: ghcr.io/autobrr/autobrr:latest
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Kolkata
+    user: 1000:1000
+    volumes:
+      - ./autobrr/config:/config
+    ports:
+      - 7474:7474
